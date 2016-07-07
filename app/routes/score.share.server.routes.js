@@ -18,6 +18,6 @@ module.exports = function(app){
             let pic = req.query.pic;
             let totalPoint = req.query.totalPoint;
 
-            res.redirect("/ibaxin.scoreshare.page.html?avgeragePoint="+avgeragePoint+"&&arrowRoadStandard="+arrowRoadStandard+"&&arrowCount="+arrowCount+"&&date="+date+"&&pic="+pic+"&&totalPoint="+totalPoint);
+            res.redirect("/ibaxin.scoreshare.page.html.bak?avgeragePoint="+avgeragePoint+"&&arrowRoadStandard="+arrowRoadStandard+"&&arrowCount="+arrowCount+"&&date="+date+"&&pic="+pic+"&&totalPoint="+totalPoint);
         });
 };

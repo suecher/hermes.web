@@ -3,5 +3,6 @@
  */
 
 module.exports = {
-    port:7108
+    port:7108,
+    interface:"http://192.168.1.254:7105"
 };

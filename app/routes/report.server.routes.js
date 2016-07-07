@@ -8,6 +8,6 @@ module.exports = function(app){
     app.route('/report/statistics/:id')
         .get(function(req,res){
             let userId = req.params.id;
-            res.render('report');
+            res.render('report',{userId:userId});
         });
 };

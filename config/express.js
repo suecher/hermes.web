@@ -19,6 +19,7 @@ module.exports = function(){
     app.use(express.static('../public'));
 
     require('../app/routes/report.server.routes')(app);
+    require('../app/routes/score.share.server.routes')(app);
 
     app.use(function(req,res){
         res.status(404);

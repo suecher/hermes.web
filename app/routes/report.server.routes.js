@@ -15,6 +15,52 @@ module.exports = function(app){
 
             ReportController.scoreByPoint(userId,function(result){
 
+
+                if(!result["0"]){
+                    result["0"] = 0;
+                }
+
+                if(!result["1"]){
+                    result["1"] = 0;
+                }
+
+                if(!result["2"]){
+                    result["2"] = 0;
+                }
+
+                if(!result["3"]){
+                    result["3"] = 0;
+                }
+
+                if(!result["4"]){
+                    result["4"] = 0;
+                }
+
+                if(!result["5"]){
+                    result["5"] = 0;
+                }
+
+                if(!result["6"]){
+                    result["6"] = 0;
+                }
+
+                if(!result["7"]){
+                    result["7"] = 0;
+                }
+
+                if(!result["8"]){
+                    result["8"] = 0;
+                }
+
+                if(!result["9"]){
+                    result["9"] = 0;
+                }
+
+                if(!result["10"]){
+                    result["10"] = 0;
+                }
+
+
                 let arrpoint = [
                     result["0"].length,
                     result["1"].length,

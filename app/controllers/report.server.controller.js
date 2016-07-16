@@ -25,6 +25,25 @@ module.exports = {
                 callback(body);
             }
         });
+    },
+    userActivity:function(userId,begindate,enddate,callback){
+        let options = {
+            url:config.interface + "/useractivity",
+            headers:{
+                'Content-Type':'application/json',
+                'User-Agent':'request'
+            },
+            json:{
+                "userId":userId,
+                "begindate":begindate,
+                "enddate":enddate
+            }
+        };
+        request.post(options,function(error,res,body){
+            if (!error && res.statusCode == 200) {
+                callback(body);
+            }
+        });
     }
 
 };

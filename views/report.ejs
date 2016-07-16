@@ -20,16 +20,20 @@
 </head>
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<div id="main" style="width: 100%;height:350px;"></div>
 <div id="linemarker" style="width: 100%;height:350px;"></div>
+<div id="main" style="width: 100%;height:350px;"></div>
+
 <div id="userId" style="display: none"><%= userId%></div>
 <div id="pointlist" style="display: none"><%= pointlist%></div>
 <script type="text/javascript">
 
 
     var pointlist = '<%- JSON.stringify(pointlist) %>';
+    var activitylist = '<%- JSON.stringify(activitylist) %>';
+
     pointlist = JSON.parse(pointlist);
-    console.log(pointlist);
+    activitylist = JSON.parse(activitylist);
+
 
 
     // 基于准备好的dom，初始化echarts实例
@@ -82,19 +86,31 @@
         xAxis:  {
             type: 'category',
             boundaryGap: false,
-            data: ['周一','周二','周三','周四','周五','周六','周日']
+            data: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
         },
         yAxis: {
             type: 'value',
             axisLabel: {
-                formatter: '{value} °C'
+                formatter: '{value} 次'
             }
         },
         series: [
             {
-                name:'最高气温',
+                name:'最高值',
                 type:'line',
-                data:[11, 11, 15, 13, 12, 13, 10],
+                data:[activitylist[0]? activitylist[0]:0,
+                    activitylist[1]? activitylist[1]:0,
+                    activitylist[2]? activitylist[2]:0,
+                    activitylist[3]? activitylist[3]:0,
+                    activitylist[4]? activitylist[4]:0,
+                    activitylist[5]? activitylist[5]:0,
+                    activitylist[6]? activitylist[6]:0,
+                    activitylist[7]? activitylist[7]:0,
+                    activitylist[8]? activitylist[8]:0,
+                    activitylist[9]? activitylist[9]:0,
+                    activitylist[10]? activitylist[10]:0,
+                    activitylist[11]? activitylist[11]:0,
+                    activitylist[12]? activitylist[12]:0],
                 markPoint: {
                     data: [
                     ]
@@ -104,44 +120,15 @@
                         {type: 'average', name: '平均值'}
                     ]
                 }
-            },
-            {
-                name:'最低气温',
-                type:'line',
-                data:[1, -2, 2, 5, 3, 2, 0],
-                markPoint: {
-                    data: [
-
-                    ]
-                },
-                markLine: {
-                    data: [
-                        {type: 'average', name: '平均值'},
-                        [{
-                            symbol: 'none',
-                            x: '90%',
-                            yAxis: 'max'
-                        }, {
-                            symbol: 'circle',
-                            label: {
-                                normal: {
-                                    position: 'start',
-                                    formatter: '最大值'
-                                }
-                            },
-                            type: 'max',
-                            name: '最高点'
-                        }]
-                    ]
-                }
             }
         ]
     };
 
 
     // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
     linemarker.setOption(option2);
+    myChart.setOption(option);
+
 </script>
 </body>
 </html>

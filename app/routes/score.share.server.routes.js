@@ -17,7 +17,8 @@ module.exports = function(app){
             let date = req.query.date;
             let pic = req.query.pic;
             let totalPoint = req.query.totalPoint;
+            let userId = req.query.userId;
 
-            res.redirect("/ibaxin.scoreshare.page.html?avgeragePoint="+avgeragePoint+"&&arrowRoadStandard="+arrowRoadStandard+"&&arrowCount="+arrowCount+"&&date="+date+"&&pic="+pic+"&&totalPoint="+totalPoint);
+            res.redirect("/ibaxin.scoreshare.page.html?userId="+userId+"&&avgeragePoint="+avgeragePoint+"&&arrowRoadStandard="+arrowRoadStandard+"&&arrowCount="+arrowCount+"&&date="+date+"&&pic="+pic+"&&totalPoint="+totalPoint);
         });
 };

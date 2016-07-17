@@ -3,7 +3,6 @@
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 	<title>成绩分享</title>
 	<style>
 		html {
@@ -20,6 +19,8 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=320" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<script type="text/javascript" src="ibaxin.scoreshare.page.hyperesources/jquery.2.2.3.min.js"></script>
+	<script type="text/javascript" src="ibaxin.scoreshare.page.hyperesources/getUrlParam.js"></script>
 
 	<!-- end copy -->
   </head>
@@ -27,62 +28,26 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="ibaxinscoreshare_hype_container" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;" aria-live="polite">
-		<script type="text/javascript" charset="utf-8" src="ibaxin.scoreshare.page.hyperesources/ibaxinscoreshare_hype_generated_script.js?52388"></script>
-		<script>
-			$(document).ready(function(){
-
-				var avgeragePoint = getUrlParam("avgeragePoint");
-				var arrowRoadStandard = getUrlParam("arrowRoadStandard");
-				var arrowCount = getUrlParam("arrowCount");
-				var date = getUrlParam("date");
-				var pic = getUrlParam("pic");
-				var totalPoint = getUrlParam("totalPoint");
-
-
-				$("#txtavgeragePoint").text(avgeragePoint);
-				$("#txtdate").text(date);
-
-				$("#txtscore").text("我在" +arrowRoadStandard+ "米箭道" );
-
-
-				$("#totalPoint").text(totalPoint);
-				$("#arrowRoadStandard").text();
-
-				console.log($("#txtavgeragePoint"));
-				console.log($("#t1"));
-				alert($("#txtavgeragePoint").text());
-				alert($("#t1").text());
-
-
-
-				function getUrlParam(name) {
-					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-					var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-					if (r != null) return unescape(r[2]); return null; //返回参数值
-				}
-
-
-			});
-		</script>
+		<script type="text/javascript" charset="utf-8" src="ibaxin.scoreshare.page.hyperesources/ibaxinscoreshare_hype_generated_script.js?36070"></script>
 	</div>
 
 	<!-- end copy -->
 	
 
 
+
 	<!-- text content for search engines: -->
 
 	<div style="display:none">
 
-		<div>6.00</div>
-		<div>均环</div>
+		<div>7.00</div>
 		<div>2016-6-6</div>
-		<div>我在 4米 箭道 18支箭射中了 18 环</div>
+		<div>均环</div>
+		<div>我在 3米 箭道 18支箭射中了 18 环</div>
 
 	</div>
-<div id="t1">555</div>
+
 	<!-- end text content: -->
 
   </body>
-
 </html>
